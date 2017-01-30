@@ -1,21 +1,20 @@
-#define SYSTEM "\n\nTiburon Systems 4.2 bsd UNIX (shark)\n\n"
-#define LOGIN "login: "
-#define PASSWORD "password:"
-#define WAIT 2
-#define INCORRECT "Login incorrect.\n"
-#define FILENAME "stuff"
+define SYSTEM "\n\nTiburon Systems 4.2 bsd UNIX (shark)\n\n"
+define LOGIN "login: "
+define PASSWORD "password:"
+define WAIT 2
+define INCORRECT "Login incorrect.\n"
+define FILENAME "stuff"
 
 #include <curses.h>
 #include <signal.h>
-#include <unistd.h>
 
 int stop();
 
-int main()
+main()
 {
     char name[10], password[10];
     int i;
-    FILE *fp;
+    FILE *fp;*fopen();
     signal(SIGINT,stop);
     initscr();
     printf(SYSTEM);
